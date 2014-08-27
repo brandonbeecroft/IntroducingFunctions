@@ -19,18 +19,24 @@
 
     // Insert code here...
     NSString *myName = @"Brandon";
-    NSString *introduction, *japaneseIntroduction;
 
-    introduction = [NSString stringWithFormat:@"My name is %@", myName];
-    japaneseIntroduction = [introduction stringByAppendingString:@" to moushimasu"];
-
-    NSLog(@"%@", introduction);
-    NSLog(@"%@", japaneseIntroduction); // Not sure this is the output desired?
-
+    // the instructions to do this were very unclear. I did not see anywhere the concept of declaring self in the recommended reading.
+    [self printIntroductions: myName];
     
     return YES;
 }
 
 // Define new functions here...
+
+// step 3
+- (void)printIntroductions:(NSString *)name {
+
+    NSString *introduction = [NSString stringWithFormat:@"My name is %@", name];
+    NSString *japaneseIntroduction = [introduction stringByAppendingString:@" to moushimasu"];
+
+    NSLog(@"%@", introduction);
+    NSLog(@"%@", japaneseIntroduction); // Not sure this is the output desired?
+
+}
 
 @end
